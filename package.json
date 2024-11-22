@@ -1,0 +1,30 @@
+{
+  "name": "typescript-sandbox",
+  "description": "An interactive environment for creating and managing TypeScript projects.",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "cli": "node cli.js",
+    "plop": "plop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gusarovv/typescript-sandbox.git"
+  },
+  "keywords": ["typescript", "sandbox", "cli", "template", "pnpm", "projects", "nodejs", "starter-kit"],
+  "author": "Alex Gusarov",
+  "license": "MIT",
+  "homepage": "https://github.com/gusarovv/typescript-sandbox#readme",
+  "bugs": {
+    "url": "https://github.com/gusarovv/typescript-sandbox/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.9.1",
+    "inquirer": "^12.1.0",
+    "plop": "^4.0.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

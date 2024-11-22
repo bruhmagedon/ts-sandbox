@@ -1,0 +1,94 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 110,
+    "attributePosition": "auto",
+    "bracketSpacing": true
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      // Rules aimed at checking complex code that can be simplified
+      "complexity": {
+        "noUselessStringConcat": "error",
+        "useLiteralKeys": "off",
+        "noForEach": "warn",
+        "noUselessUndefinedInitialization": "error",
+        "useDateNow": "warn",
+        "useSimplifiedLogicExpression": "info"
+      },
+      // Rules that define code that is guaranteed to be incorrect or useless
+      "correctness": {
+        "noInvalidNewBuiltin": "error",
+        "noNewSymbol": "error",
+        "noNodejsModules": "off",
+        "noUndeclaredVariables": "error",
+        "noUnusedPrivateClassMembers": "info",
+        "noUnusedVariables": "info"
+      },
+      // Early access
+      "nursery": {},
+      // Rules that define how to write your code so that it runs faster or is generally more efficient
+      "performance": {},
+      // Rules that reveal potential security flaws
+      "security": {},
+      // Rules that ensure a consistent and idiomatic way of writing code
+      "style": {
+        "noDoneCallback": "warn",
+        "noRestrictedGlobals": "warn",
+        "noYodaExpression": "warn",
+        "useBlockStatements": "warn",
+        "useImportType": "off",
+        "noUnusedTemplateLiteral": "warn",
+        "useCollapsedElseIf": "warn",
+        "useConsistentArrayType": "warn",
+        "useDefaultSwitchClause": "warn",
+        "useExplicitLengthCheck": "warn",
+        "useForOf": "warn",
+        "useShorthandAssign": "warn",
+        "useSingleCaseStatement": "warn",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error"
+      },
+      // Rules that define code that may be incorrect or useless
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noEmptyBlockStatements": "warn",
+        "noMisplacedAssertion": "error",
+        "useAwait": "warn",
+        "useErrorMessage": "warn"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  }
+}
