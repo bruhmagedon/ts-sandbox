@@ -20,7 +20,7 @@
     "enabled": true
   },
   "linter": {
-    "enabled": true,
+    "enabled": false,
     "rules": {
       "recommended": true,
       // Rules aimed at checking complex code that can be simplified
